@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Home img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+    .Home h4 {
+        margin: 0px;
+
+    }
+
+    .Home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        gap: 100px;
+    }
+
+    .cat{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .deals{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .cat-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding-left: 20px;
+
+    }
+
+    .deals-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        padding-left: 20px;
+    }
+
+
+    .cat-card {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(236, 241, 244);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .deals-card {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(244, 240, 255);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .deals-card img{
+        padding-top: 20px;
+    }
+
+</style>
+
+<body>
+    <div class="Home">
+        <div class="hero">
+            <h1>Welcome to the WebKart</h1>
+            <h3>Shop Smart. Live Better</h3>
+            <p>Discover products you love, at prices you'll love even more.</p>
+        </div>
+        <div class="cat">
+            <h2>Featured Categories</h2>
+           <div class="cat-cards">
+             <div class="cat-card">
+                <img src="./images/electronics.png" alt="">
+                <h4>Electronics</h4>
+            </div>
+            <div class="cat-card">
+                <img style="width: 100px; height: 140px" src="./images/fashion.jpeg" alt="">
+                <h4>Fashion</h4>
+            </div>
+            <div class="cat-card">
+                <img src="./images/beauty.jpeg" alt="">
+                <h4>Beauty</h4>
+            </div>
+            <div class="cat-card">
+                <img src="./images/furniture.jpeg" alt="">
+                <h4>Home&Living</h4>
+            </div>
+            <div class="cat-card">
+                <img src="./images/sports.jpeg" alt="">
+                <h4>Sports</h4>
+            </div>
+            <div class="cat-card">
+                <img src="./images/toys.jpeg" alt="">
+                <h4>Toys & Kids</h4>
+            </div>
+           </div>
+        </div>
+
+        <div class="deals">
+            <div class="deals-cards">
+                <div class="deals-card">
+                <img src="./images/ps5.png" alt="">
+                <div style="">
+                    <h4>Ps5</h4>
+                    <p>price: 50,000/-</p>
+                </div>
+            </div>
+            <div class="deals-card">
+                <img src="./images/bag.png" style="height:140px" alt="">
+                <div>
+                    <h4>Travel Backpack</h4>
+                    <p>price: 5,000/-</p>
+                </div>
+
+            </div>
+            <div class="deals-card">
+                <img src="" alt="">
+                <div>
+                    <h4>White Sneakers</h4>
+                <p>price: 3,000/-</p>
+                </div>
+                
+            </div>
+            <div class="deals-card">
+                <img src="./images/headphones.png" style="width:180px;" alt="">
+                <div><h4>Head Phones</h4>
+                <p>price: 3200/-</p></div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
