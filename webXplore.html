@@ -7,37 +7,59 @@
     <title>Document</title>
 </head>
 <style>
-    .Home img {
-        width: 120px;
-        height: 120px;
+    body {
+        margin: 0px;
+        padding: 0px;
     }
 
+    .Home img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
 
+    }
 
     .Home h4 {
         margin: 0px;
 
     }
 
+    .Home p {
+        padding: 0;
+        margin: 0;
+    }
+
     .Home {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
-        gap: 100px;
     }
 
-    .cat{
+    .hero {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 10px;
+        padding-bottom: 100px;
+
     }
-    
-    .deals{
+
+    .cat {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        
+        background-color: rgb(227, 246, 254);
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+
+    .deals {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgb(255, 251, 137);
+        padding: 20px;
+
     }
 
     .cat-cards {
@@ -51,7 +73,7 @@
     .deals-cards {
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 50px;
         padding-left: 20px;
     }
 
@@ -59,7 +81,7 @@
     .cat-card {
         width: 200px;
         height: 200px;
-        background-color: rgb(236, 241, 244);
+        background-color: rgb(255, 255, 255);
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -67,12 +89,23 @@
         justify-content: center;
         gap: 15px;
         align-items: center;
+        padding: 10px;
+    }
+
+    .cat-card:hover{
+        transform: scale(1.1);
+        transition: 0.3s ease;
+    }
+
+    .deals-card:hover{
+        transform: scale(1.1);
+        transition: 0.3s ease;
     }
 
     .deals-card {
         width: 200px;
         height: 200px;
-        background-color: rgb(244, 240, 255);
+        background-color: #ffffff;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -81,81 +114,82 @@
         padding: 10px;
         text-align: center;
         gap: 15px;
+        padding-bottom: 20px;
     }
-
-    .deals-card img{
-        padding-top: 20px;
-    }
-
 </style>
 
 <body>
     <div class="Home">
         <div class="hero">
-            <h1>Welcome to the WebKart</h1>
-            <h3>Shop Smart. Live Better</h3>
-            <p>Discover products you love, at prices you'll love even more.</p>
+            <h1 style="text-align: center; font-size: xxx-large;">Welcome to the WebKart</h1>
+            <div style="display: flex; flex-direction: column; padding-left: 250px;">
+                <h2 style="margin:0px; color:rgb(255, 167, 2); font-size:xxx-large;">Shop Smart, <br> <span style="padding-left: 10px; color:rgb(0, 179, 255)">Live Better</span></h2>
+                <p style="padding: 10px; color:rgb(74, 3, 102)" >Discover products you love, at prices you'll love even more.</p>
+            </div>
         </div>
         <div class="cat">
             <h2>Featured Categories</h2>
-           <div class="cat-cards">
-             <div class="cat-card">
-                <img src="./images/electronics.png" alt="">
-                <h4>Electronics</h4>
+            <div class="cat-cards">
+                <div class="cat-card">
+                    <img src="./images/home/electronics.png" alt="">
+                    <h4>Electronics</h4>
+                </div>
+                <div class="cat-card">
+                    <img style="width: 100px; height: 140px" src="./images/home/fashion.jpeg" alt="">
+                    <h4>Fashion</h4>
+                </div>
+                <div class="cat-card">
+                    <img src="./images/home/beauty.jpeg" alt="">
+                    <h4>Beauty</h4>
+                </div>
+                <div class="cat-card">
+                    <img src="./images/home/furniture.jpeg" alt="">
+                    <h4>Home&Living</h4>
+                </div>
+                <div class="cat-card">
+                    <img src="./images/home/sports.jpeg" alt="">
+                    <h4>Sports</h4>
+                </div>
+                <div class="cat-card">
+                    <img src="./images/home/toys.jpeg" alt="">
+                    <h4>Toys & Kids</h4>
+                </div>
             </div>
-            <div class="cat-card">
-                <img style="width: 100px; height: 140px" src="./images/fashion.jpeg" alt="">
-                <h4>Fashion</h4>
-            </div>
-            <div class="cat-card">
-                <img src="./images/beauty.jpeg" alt="">
-                <h4>Beauty</h4>
-            </div>
-            <div class="cat-card">
-                <img src="./images/furniture.jpeg" alt="">
-                <h4>Home&Living</h4>
-            </div>
-            <div class="cat-card">
-                <img src="./images/sports.jpeg" alt="">
-                <h4>Sports</h4>
-            </div>
-            <div class="cat-card">
-                <img src="./images/toys.jpeg" alt="">
-                <h4>Toys & Kids</h4>
-            </div>
-           </div>
         </div>
 
         <div class="deals">
+            <h2>Featured Products</h2>
             <div class="deals-cards">
                 <div class="deals-card">
-                <img src="./images/ps5.png" alt="">
-                <div style="">
-                    <h4>Ps5</h4>
-                    <p>price: 50,000/-</p>
+                    <img src="./images/ps5.png" alt="">
+                    <div style="">
+                        <h4>Ps5</h4>
+                        <p>price: 50,000/-</p>
+                    </div>
                 </div>
-            </div>
-            <div class="deals-card">
-                <img src="./images/bag.png" style="height:140px" alt="">
-                <div>
-                    <h4>Travel Backpack</h4>
-                    <p>price: 5,000/-</p>
-                </div>
+                <div class="deals-card">
+                    <img style="height: 170px;" src="./images/bag.png" style="height:140px" alt="">
+                    <div>
+                        <h4>Travel Backpack</h4>
+                        <p>price: 5,000/-</p>
+                    </div>
 
-            </div>
-            <div class="deals-card">
-                <img src="" alt="">
-                <div>
-                    <h4>White Sneakers</h4>
-                <p>price: 3,000/-</p>
                 </div>
-                
-            </div>
-            <div class="deals-card">
-                <img src="./images/headphones.png" style="width:180px;" alt="">
-                <div><h4>Head Phones</h4>
-                <p>price: 3200/-</p></div>
-            </div>
+                <div class="deals-card">
+                    <img src="" alt="">
+                    <div>
+                        <h4>White Sneakers</h4>
+                        <p>price: 3,000/-</p>
+                    </div>
+
+                </div>
+                <div class="deals-card">
+                    <img style="width:200px" src="./images/headphones.png" style="width:180px;" alt="">
+                    <div>
+                        <h4>Head Phones</h4>
+                        <p>price: 3200/-</p>
+                    </div>
+                </div>
             </div>
 
         </div>
