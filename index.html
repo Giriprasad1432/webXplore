@@ -70,32 +70,67 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
+
         gap: 15px;
-        padding: 60px 20px;
-        background: linear-gradient(135deg, #fff7ed 0%, #e0f2fe 100%);
+        padding: 0 200px;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+        min-height: 600px;
+
+        background:
+          linear-gradient(rgba(32, 25, 25, 0.45), rgba(26, 18, 18, 0.45)),
+          url("images/bg.jpeg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
 
+      .button {
+        display: inline-block;
+        width: 130px;
+
+        padding: 10px;
+
+        background-color: rgb(128, 62, 44);
+        color: white;
+
+        text-decoration: none;
+        text-align: center;
+
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+
+        border: none;
+        cursor: pointer;
+        height: 35px;
+      }
+      .button a {
+        text-decoration: none;
+        color: white;
+      }
       .hero h1 {
-        font-size: 38px;
+        font-size: 25px;
         margin: 0;
+        color: rgb(128, 62, 44);
       }
 
       .hero h2 {
         margin: 0;
-        color: rgb(255, 167, 2);
-        font-size: 32px;
+
+        font-size: 50px;
       }
 
       .hero h2 span {
-        color: rgb(0, 179, 255);
+        color: rgb(128, 62, 44);
       }
 
       .hero p {
         padding: 0;
         margin: 0;
-        color: rgb(74, 3, 102);
+        color: rgb(16, 16, 16);
         font-size: 18px;
       }
 
@@ -161,7 +196,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        background-color: rgb(255, 251, 137);
+        background-color: rgb(221, 199, 217);
         padding: 30px 20px;
         margin-bottom: 40px;
       }
@@ -268,9 +303,10 @@
       <div class="hero">
         <h1>Welcome to WebKart</h1>
         <h2>
-          Shop Smart, <br /><span style="padding-left: 10px">Live Better</span>
+          Shop Smart,<br /><span style="padding-left: 10px">Live Better</span>
         </h2>
         <p>Discover products you love, at prices you'll love even more.</p>
+        <div class="button"><a href="products.html"> Shop Now</a></div>
       </div>
 
       <!-- Featured Categories -->
