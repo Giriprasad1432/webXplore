@@ -31,11 +31,7 @@ body {
     color: #00b3ff;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+
 
 .navbar a {
     text-decoration: none;
