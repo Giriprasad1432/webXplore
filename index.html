@@ -1,428 +1,399 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebKart - Home</title>
-    <style>
-      /* 1. Basic Page Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #ffffff;
-        color: #222222;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebKart - Home</title>
+  <style>
+    /* 1. Basic Page Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      /* 2. Navigation Bar */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffffff;
-        padding: 15px 40px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+    }
 
-      .navbar .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #f47b20;
-        text-decoration: none;
-      }
+    /* 2. Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      .navbar .logo span {
-        color: #00b3ff;
-      }
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f47b20;
+      text-decoration: none;
+    }
 
-      .navbar ul {
-        display: flex;
-        list-style: none;
-        gap: 20px;
-      }
+    .navbar .logo span {
+      color: #00b3ff;
+    }
 
-      .navbar a {
-        text-decoration: none;
-        color: #333333;
-        font-weight: bold;
-        padding: 8px 12px;
-        border-radius: 5px;
-        transition: 0.3s;
-      }
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
 
-      .navbar a:hover,
-      .navbar a.active {
-        background-color: #f47b20;
-        color: #ffffff;
-      }
+    .navbar a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
-      /* 3. Hero Section */
-      .Home {
-        display: flex;
-        flex-direction: column;
-      }
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #f47b20;
+      color: #ffffff;
+    }
 
-      .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    /* 3. Hero Section */
+    .Home {
+      display: flex;
+      flex-direction: column;
+    }
 
-        gap: 15px;
-        padding: 0 200px;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-        width: 100%;
-        height: calc(100vh - 80px);
-        min-height: 600px;
+      gap: 15px;
+      padding: 0 200px;
 
-        background:
-          linear-gradient(rgba(32, 25, 25, 0.45), rgba(26, 18, 18, 0.45)),
-          url("images/bg.jpeg");
+      width: 100%;
+      height: calc(100vh - 80px);
+      min-height: 600px;
 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
+      background:
+        linear-gradient(rgba(32, 25, 25, 0.45), rgba(26, 18, 18, 0.45)),
+        url("images/bg.jpeg");
 
-      .button {
-        display: inline-block;
-        width: 130px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-        padding: 10px;
+    .button {
+      display: inline-block;
+      width: 130px;
 
-        background-color: rgb(128, 62, 44);
-        color: white;
+      padding: 10px;
 
-        text-decoration: none;
-        text-align: center;
+      background-color: rgb(128, 62, 44);
+      color: white;
 
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: bold;
+      text-decoration: none;
+      text-align: center;
 
-        border: none;
-        cursor: pointer;
-        height: 35px;
-      }
-      .button a {
-        text-decoration: none;
-        color: white;
-      }
-      .hero h1 {
-        font-size: 25px;
-        margin: 0;
-        color: rgb(128, 62, 44);
-      }
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
 
-      .hero h2 {
-        margin: 0;
+      border: none;
+      cursor: pointer;
+      height: 35px;
+    }
 
-        font-size: 50px;
-      }
+    .button a {
+      text-decoration: none;
+      color: white;
+    }
 
-      .hero h2 span {
-        color: rgb(128, 62, 44);
-      }
+    .hero h1 {
+      font-size: 25px;
+      margin: 0;
+      color: rgb(128, 62, 44);
+    }
 
-      .hero p {
-        padding: 0;
-        margin: 0;
-        color: rgb(16, 16, 16);
-        font-size: 18px;
-      }
+    .hero h2 {
+      margin: 0;
 
-      /* 4. Featured Categories Section */
-      .cat {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        background-color: rgb(227, 246, 254);
-        padding: 30px 20px;
-        margin-bottom: 40px;
-      }
+      font-size: 50px;
+    }
 
-      .cat h2 {
-        text-align: center;
-        font-size: 26px;
-      }
+    .hero h2 span {
+      color: rgb(128, 62, 44);
+    }
 
-      .cat-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-      }
+    .hero p {
+      padding: 0;
+      margin: 0;
+      color: rgb(16, 16, 16);
+      font-size: 18px;
+    }
 
-      .cat-card {
-        width: 170px;
-        height: 180px;
-        background-color: #ffffff;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        padding: 10px;
-        text-decoration: none;
-        color: #222;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
+    /* 4. Featured Categories Section */
+    .cat {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-      .cat-card:hover {
-        transform: scale(1.08);
-      }
+      background: linear-gradient(to bottom, rgb(243, 248, 251), rgb(181, 221, 240));
+      padding: 30px 20px;
+      margin-bottom: 40px;
+    }
 
-      .cat-card img {
-        width: 90px;
-        height: 90px;
-        object-fit: contain;
-        border-radius: 12px;
-      }
+    .cat h2 {
+      text-align: center;
+      font-size: 26px;
+    }
 
-      .cat-card h4 {
-        margin: 0;
-        font-size: 15px;
-      }
+    .cat-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
 
-      /* 5. Featured Products Section */
-      .deals {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        background-color: rgb(221, 199, 217);
-        padding: 30px 20px;
-        margin-bottom: 40px;
-      }
+    .cat-card {
+      width: 170px;
+      height: 180px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 10px;
+      text-decoration: none;
+      color: #222;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
 
-      .deals h2 {
-        text-align: center;
-        font-size: 26px;
-      }
+    .cat-card:hover {
+      transform: scale(1.08);
+    }
 
-      .deals-cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-      }
+    .cat-card img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
 
-      .deals-card {
-        width: 200px;
-        background-color: #ffffff;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        text-align: center;
-        gap: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
+    .cat-card h4 {
+      margin: 0;
+      font-size: 15px;
+    }
 
-      .deals-card:hover {
-        transform: scale(1.08);
-      }
+    /* 5. Featured Products Section */
+    .deals {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: linear-gradient(to right, rgb(236, 233, 236), rgb(213, 198, 209));
+      padding: 30px 20px;
+      margin-bottom: 40px;
+    }
 
-      .deals-card img {
-        width: 140px;
-        height: 140px;
-        object-fit: contain;
-        border-radius: 20px;
-      }
+    .deals h2 {
+      text-align: center;
+      font-size: 26px;
+    }
 
-      .deals-card h4 {
-        margin: 0;
-        font-size: 16px;
-      }
+    .deals-cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
 
-      .deals-card p {
-        margin: 5px 0 0 0;
-        font-weight: bold;
-        color: #f47b20;
-      }
+    .deals-card {
+      width: 200px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      text-align: center;
+      gap: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
 
-      /* 6. Simple Footer */
-      footer {
-        background-color: #211b4a;
-        color: white;
-        display: flex;
-        justify-content: space-around;
-        padding: 25px 7%;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
+    .deals-card:hover {
+      transform: scale(1.08);
+    }
 
-      .feature {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
+    .deals-card img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 20px;
+    }
 
-      .feature-icon {
-        font-size: 25px;
-      }
+    .deals-card h4 {
+      margin: 0;
+      font-size: 16px;
+    }
 
-      .feature h3 {
-        font-size: 13px;
-        margin-bottom: 5px;
-      }
+    .deals-card p {
+      margin: 5px 0 0 0;
+      font-weight: bold;
+      color: #f47b20;
+    }
 
-      .feature p {
-        font-size: 11px;
-        color: #ccc;
-      }
-    </style>
-  </head>
+    /* 6. Simple Footer */
+    footer {
+      background-color: #211b4a;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 25px 7%;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-  <body>
-    <!-- Simple Navigation Bar Linking to Related Pages -->
-    <header class="navbar">
-      <a href="index.html" class="logo">🛒 Web<span>Kart</span></a>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="categories.html">Categories</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="review.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </header>
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-    <!-- Main Container -->
-    <div class="Home">
-      <!-- Hero Section -->
-      <div class="hero">
-        <h1>Welcome to WebKart</h1>
-        <h2>
-          Shop Smart,<br /><span style="padding-left: 10px">Live Better</span>
-        </h2>
-        <p>Discover products you love, at prices you'll love even more.</p>
-        <div class="button"><a href="products.html"> Shop Now</a></div>
+    .feature-icon {
+      font-size: 25px;
+    }
+
+    .feature h3 {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      font-size: 11px;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Simple Navigation Bar Linking to Related Pages -->
+  <header class="navbar">
+    <a href="index.html" class="logo">🛒 Web<span>Kart</span></a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="review.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Container -->
+  <div class="Home">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Welcome to WebKart</h1>
+      <h2>
+        Shop Smart,<br /><span style="padding-left: 10px">Live Better</span>
+      </h2>
+      <p>Discover products you love, at prices you'll love even more.</p>
+      <div class="button"><a href="products.html"> Shop Now</a></div>
+    </div>
+
+    <!-- Featured Categories -->
+    <div class="cat">
+      <h2>Featured Categories</h2>
+      <div class="cat-cards">
+        <a href="categories.html" class="cat-card">
+          <img src="./images/electronics.png" alt="Electronics" />
+          <h4>Electronics</h4>
+        </a>
+        <a href="categories.html" class="cat-card">
+          <img src="./images/Fashion.jpeg" alt="Fashion" />
+          <h4>Fashion</h4>
+        </a>
+        <a href="categories.html" class="cat-card">
+          <img src="./images/Beauty.jpeg" alt="Beauty" />
+          <h4>Beauty</h4> 
+        </a>
+        <a href="categories.html" class="cat-card">
+          <img src="./images/Furniture.jpeg" alt="Home & Living" />
+          <h4>Home & Living</h4>
+        </a>
+        <a href="categories.html" class="cat-card">
+          <img src="./images/Sports.jpeg" alt="Sports" />
+          <h4>Sports</h4>
+        </a>
+        <a href="categories.html" class="cat-card">
+          <img src="./images/Toys.jpeg" alt="Toys & Kids" />
+          <h4>Toys & Kids</h4>
+        </a>
       </div>
+    </div>
 
-      <!-- Featured Categories -->
-      <div class="cat">
-        <h2>Featured Categories</h2>
-        <div class="cat-cards">
-          <a href="categories.html" class="cat-card">
-            <img src="./images/electronics.png" alt="Electronics" />
-            <h4>Electronics</h4>
-          </a>
-          <a href="categories.html" class="cat-card">
-            <img src="./images/Fashion.jpeg" alt="Fashion" />
-            <h4>Fashion</h4>
-          </a>
-          <a href="categories.html" class="cat-card">
-            <img src="./images/Beauty.jpeg" alt="Beauty" />
-            <h4>Beauty</h4>
-          </a>
-          <a href="categories.html" class="cat-card">
-            <img src="./images/Furniture.jpeg" alt="Home & Living" />
-            <h4>Home & Living</h4>
-          </a>
-          <a href="categories.html" class="cat-card">
-            <img src="./images/Sports.jpeg" alt="Sports" />
-            <h4>Sports</h4>
-          </a>
-          <a href="categories.html" class="cat-card">
-            <img src="./images/Toys.jpeg" alt="Toys & Kids" />
-            <h4>Toys & Kids</h4>
-          </a>
+    <!-- Featured Products -->
+    <div class="deals">
+      <h2>Featured Products</h2>
+      <div class="deals-cards">
+        <div class="deals-card">
+          <img src="./images/ps5.png" alt="PS5" />
+          <div>
+            <h4>PS5 Console</h4>
+            <p>price: 50,000/-</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Featured Products -->
-      <div class="deals">
-        <h2>Featured Products</h2>
-        <div class="deals-cards">
-          <div class="deals-card">
-            <img src="./images/ps5.png" alt="PS5" />
-            <div>
-              <h4>PS5 Console</h4>
-              <p>price: 50,000/-</p>
-            </div>
+        <div class="deals-card">
+          <img src="./images/bag.png" alt="Travel Backpack" />
+          <div>
+            <h4>Travel Backpack</h4>
+            <p>price: 5,000/-</p>
           </div>
-          <div class="deals-card">
-            <img src="./images/bag.png" alt="Travel Backpack" />
-            <div>
-              <h4>Travel Backpack</h4>
-              <p>price: 5,000/-</p>
-            </div>
+        </div>
+        <div class="deals-card">
+          <img src="./images/shoes.jpg" alt="White Sneakers" />
+          <div>
+            <h4>White Sneakers</h4>
+            <p>price: 3,000/-</p>
           </div>
-          <div class="deals-card">
-            <img src="./images/shoes.jpg" alt="White Sneakers" />
-            <div>
-              <h4>White Sneakers</h4>
-              <p>price: 3,000/-</p>
-            </div>
+        </div>
+        <div class="deals-card">
+          <img src="./images/headphones.png" alt="Headphones" />
+          <div>
+            <h4>Headphones</h4>
+            <p>price: 3,200/-</p>
           </div>
-          <div class="deals-card">
-            <img src="./images/headphones.png" alt="Headphones" />
-            <div>
-              <h4>Headphones</h4>
-              <p>price: 3,200/-</p>
-            </div>
+        </div>
+        <div class="deals-card">
+          <img src="./images/sunglasses.jpeg" alt="Sun Glasses" />
+          <div>
+            <h4>Sun Glasses</h4>
+            <p>price: 1,200/-</p>
           </div>
-          <div class="deals-card">
-            <img src="./images/sunglasses.jpeg" alt="Sun Glasses" />
-            <div>
-              <h4>Sun Glasses</h4>
-              <p>price: 1,200/-</p>
-            </div>
-          </div>
-          <div class="deals-card">
-            <img src="./images/watch.jpg" alt="Watch" />
-            <div>
-              <h4>Smart Watch</h4>
-              <p>price: 2,100/-</p>
-            </div>
+        </div>
+        <div class="deals-card">
+          <img src="./images/watch.jpg" alt="Watch" />
+          <div>
+            <h4>Smart Watch</h4>
+            <p>price: 2,100/-</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Simple Footer -->
-    <footer class="footer">
-      <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <div>
-          <h3>Free Delivery</h3>
-          <p>On orders above ₹499</p>
-        </div>
-      </div>
 
-      <div class="feature">
-        <div class="feature-icon">🔒</div>
-        <div>
-          <h3>Secure Payment</h3>
-          <p>100% secure checkout</p>
-        </div>
-      </div>
+</body>
 
-      <div class="feature">
-        <div class="feature-icon">↩️</div>
-        <div>
-          <h3>Easy Returns</h3>
-          <p>Within 7 Days</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🎧</div>
-        <div>
-          <h3>24/7 Support</h3>
-          <p>We're here to help</p>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>

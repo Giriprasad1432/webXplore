@@ -126,33 +126,3 @@ body {
 .review-button:hover {
     background-color: #d96112;
 }
-
-footer {
-    background-color: #211b4a;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 25px 7%;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.feature-icon {
-    font-size: 25px;
-}
-
-.feature h3 {
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-
-.feature p {
-    font-size: 11px;
-    color: #ccc;
-}
